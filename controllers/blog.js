@@ -37,14 +37,12 @@ const getBlogs = async (req, res) => {
 
 const getOneBlog = async (req, res) => {
     try {
-        const blog = await blogModel.findOne({title : req.query.title});
-        console.log(req.query.title)
+        const blog = await blogModel.findOne({_id : req.query._id});
         res.send(blog)
     } catch (err){
         console.log(err)
     }
 }
-
 
 module.exports = {
     createBlog,
