@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/blog', blogRoutes)
 
 
-app.listen(1000,()=> {
+app.listen(1500,()=> {
     console.log('project Started');
 })
 
