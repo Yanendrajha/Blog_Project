@@ -37,7 +37,7 @@ const getBlogs = async (req, res) => {
 
 const getOneBlog = async (req, res) => {
     try {
-        const blog = await blogModel.findOne({_id : req.query._id});
+        const blog = await blogModel.findOne({_id : req.params.id});
         res.send(blog)
     } catch (err){
         console.log(err)
