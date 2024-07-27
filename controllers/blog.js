@@ -38,6 +38,7 @@ const getBlogs = async (req, res) => {
 const getOneBlog = async (req, res) => {
     try {
         const blog = await blogModel.findOne(req.params.title);
+        console.log(req.params.title + " printed")
         res.send(blog)
     } catch (err){
         console.log(err)

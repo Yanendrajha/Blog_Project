@@ -7,6 +7,6 @@ router.post('/create', blogController.createBlog);
 router.get('/', blogController.getBlogs);
 router.get('/all', blogController.getBlogs);
 
-router.get('/:title', blogController.getOneBlog);
+router.get('/getone', blogController.getOneBlog);
 
 module.exports = router;
